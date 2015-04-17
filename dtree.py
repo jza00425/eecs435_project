@@ -4,13 +4,16 @@ from sklearn.externals.six import StringIO
 from sklearn import tree
 
 # dummy data:
-df = pd.DataFrame({'a':[0,0,1,1],'b':[0,1,0,1], 'c': [0,1,1,0], 'dv':[0,0,0,1]})
+# df = pd.DataFrame({'a':[0,0,1,1],'b':[0,1,0,1], 'c': [0,1,1,0], 'dv':[0,0,0,1]})
+# df = pd.read_csv('dump.csv')
+df = pd.read_csv('result.csv')
+print df
 
 # create decision tree
 dt = tree.DecisionTreeClassifier(criterion='entropy')
-dt.fit(df.ix[:,:3], df.dv)
+dt.fit(df.ix[:,:11], df.dv)
 with open("decisionTree.dot", 'w') as f:
-    f = tree.export_graphviz(dt, out_file = f, feature_names = ['a', 'b', 'c'])
+    f = tree.export_graphviz(dt, out_file = f, feature_names = ['G5', 'G6', 'G7', 'G0_0', 'G1_0', 'G2_0', 'G3_0', 'G0_1', 'G1_1', 'G2_1', 'G3_1'])
 
 def get_lineage(dtree, feature_names):
     left = dtree.tree_.children_left

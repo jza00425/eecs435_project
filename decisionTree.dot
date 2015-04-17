@@ -1,11 +1,11 @@
 digraph Tree {
-0 [label="c <= 0.5000\nentropy = 0.811278124459\nsamples = 4", shape="box"] ;
-1 [label="b <= 0.5000\nentropy = 1.0\nsamples = 2", shape="box"] ;
+0 [label="G0_0 <= 0.5000\nentropy = 0.825169382252\nsamples = 1228", shape="box"] ;
+1 [label="G6 <= 0.5000\nentropy = 0.998792009874\nsamples = 611", shape="box"] ;
 0 -> 1 ;
-2 [label="entropy = 0.0000\nsamples = 1\nvalue = [ 1.  0.]", shape="box"] ;
+2 [label="entropy = 0.0000\nsamples = 293\nvalue = [ 293.    0.]", shape="box"] ;
 1 -> 2 ;
-3 [label="entropy = 0.0000\nsamples = 1\nvalue = [ 0.  1.]", shape="box"] ;
+3 [label="entropy = 0.0000\nsamples = 318\nvalue = [   0.  318.]", shape="box"] ;
 1 -> 3 ;
-4 [label="entropy = 0.0000\nsamples = 2\nvalue = [ 2.  0.]", shape="box"] ;
+4 [label="entropy = 0.0000\nsamples = 617\nvalue = [ 617.    0.]", shape="box"] ;
 0 -> 4 ;
 }
